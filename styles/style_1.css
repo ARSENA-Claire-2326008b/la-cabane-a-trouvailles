@@ -1,0 +1,84 @@
+body {
+  background-color: #F5F2B8; 
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background-color: #A491D3; 
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}
+
+
+.logo {
+    width: 100px;   
+    height: auto;  
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+nav a {
+    color: #ffffff; 
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #C5DCA0; 
+}
+
+/* ---------- MAIN ---------- */
+main {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #A491D3; 
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------- BOUTONS ---------- */
+button, .btn {
+    background-color: #C5DCA0;
+    color: #333;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    font-family: 'Fredoka One', cursive;
+}
+
+button:hover, .btn:hover {
+    background-color: #C5DCA0;
+    color: white;
+}
