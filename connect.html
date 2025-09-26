@@ -3,11 +3,48 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Connexion</title>
+        <link rel="stylesheet" href="styles/style_1.css" />
+        <link rel="icon" type="image/x-icon" href="styles/img/Logo_demi.svg" />
+        <title>Authentification</title>
     </head>
     <body>
-        <header>
-            <h1>Bienvenue</h1>
-        </header>
+        <main>
+            <h2>Accédez à votre compte</h2>
+            <form>
+                <div>
+                    <label for="email">Adresse email :</label>                        
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" minlength="8" maxlength="16" required>
+                </div>
+                    
+                <div>
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Se souvenir de moi</label>
+                </div>
+                    
+                <div>
+                        <button type="submit">Se connecter</button>
+                </div>
+            </form>
+                
+            <div>
+                    <p><a href="#">Mot de passe oublié ?</a></p>
+                    <a href="#">Pas encore de compte ?</a>
+            </div>
+        </main>
+        
+        <footer>
+            <img src="styles/img/Logo_demi.svg" alt="Logo de l'association La cabane à trouvailles" width="100" height="100">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <p>Reseaux sociaux :</p>
+            <a href="#">Facebook</a>
+            <p><a href="#">Tiktok</a>
+            <a href="#">Instagram</a>
+            <p>&copy; 2025 - Tous droits réservés</p>
+        </footer>
     </body>
 </html>
