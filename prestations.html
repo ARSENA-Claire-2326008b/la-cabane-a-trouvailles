@@ -36,7 +36,7 @@
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="prestations.html">Nos prestations</a></li>
-            <li><a href="benevole.html">Devenir bénévole</a></li>
+            <li><a href="volunteer.html">Devenir bénévole</a></li>
             <li><a href="contact.html">Nous contacter</a></li>
             <li><button><a href="connect.html">Connexion</a></button></li>
         </ul>
@@ -69,3 +69,109 @@
     <div class="image-item"><img src="/img/voiture.jpg" alt=""></div>
     </div>
   </div>
+
+  <h1>Nos produits à pré-commander</h1>
+    <section class="card-row">
+        <!-- Poussettes -->
+        <article class="card">
+            <h2>Poussette</h2>
+            <img src="img/poussette.jpg" alt="Poussette" style="width:200px;height:150px;border-radius:12px;">
+            <p>Confort et sécurité pour vos promenades.</p>
+            <p>Prix : 120€</p>
+            <button onclick="precommander('Poussette')">Pré-commander</button>
+        </article>
+
+        <!-- Habits -->
+        <article class="card">
+            <h2>Habits</h2>
+            <img src="img/habits.webp" alt="Habits" style="width:200px;height:150px;border-radius:12px;">
+            <p>Vêtements stylés pour enfants de 0 à 12 ans.</p>
+            <p>Prix : à partir de 15€</p>
+            <button onclick="precommander('Habits')">Pré-commander</button>
+        </article>
+
+        <!-- Barbie -->
+        <article class="card">
+            <h2>Barbie</h2>
+            <img src="img/barbie.jpg" alt="Barbie" style="width:200px;height:150px;border-radius:12px;">
+            <p>Les dernières Barbie pour des heures de jeu.</p>
+            <p>Prix : 30€</p>
+            <button onclick="precommander('Barbie')">Pré-commander</button>
+        </article>
+
+        <!-- Voitures -->
+        <article class="card">
+            <h2>Voitures</h2>
+            <img src="img/voiture.jpg" alt="Voitures" style="width:200px;height:150px;border-radius:12px;">
+            <p>Mini voitures pour collection ou jeu.</p>
+            <p>Prix : 10€</p>
+            <button onclick="precommander('Voitures')">Pré-commander</button>
+        </article>
+
+        <!-- Lego -->
+        <article class="card">
+            <h2>Lego</h2>
+            <img src="img/lego.png" alt="Lego" style="width:200px;height:150px;border-radius:12px;">
+            <p>Construisez vos univers avec Lego.</p>
+            <p>Prix : 25€</p>
+            <button onclick="precommander('Lego')">Pré-commander</button>
+        </article>
+
+        <!-- Doudous -->
+        <article class="card">
+            <h2>Doudou</h2>
+            <img src="img/doudou.jpg" alt="Doudou" style="width:200px;height:150px;border-radius:12px;">
+            <p>Doudous doux pour accompagner vos enfants.</p>
+            <p>Prix : 12€</p>
+            <button onclick="precommander('Doudou')">Pré-commander</button>
+        </article>
+
+        <!-- Jeux de société -->
+        <article class="card">
+            <h2>Jeux de société</h2>
+            <img src="img/jeu.jpg" alt="Jeux de société" style="width:200px;height:150px;border-radius:12px;">
+            <p>Jeux pour toute la famille et amis.</p>
+            <p>Prix : 20€</p>
+            <button onclick="precommander('Jeux de société')">Pré-commander</button>
+        </article>
+    </section>
+</main>
+
+<!-- Notification -->
+<div id="notification"></div>
+
+<script>
+function precommander(produit) {
+    // Demander prénom et nom
+    let prenom = prompt("Entrez votre prénom pour la pré-commande de " + produit + " :");
+    if (!prenom) return;
+    let nom = prompt("Entrez votre nom :");
+    if (!nom) return;
+
+    // Construire le message
+    let message = "Merci " + prenom + " " + nom + " pour ta précommande de " + produit + " !\nTu pourras la récupérer en magasin.";
+
+    // Afficher la notification
+    let notif = document.getElementById('notification');
+    notif.textContent = message;
+    notif.style.display = 'block';
+
+    // Disparaît après 5 secondes
+    setTimeout(() => {
+        notif.style.display = 'none';
+    }, 5000);
+}
+</script>
+
+        <footer>
+            <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" width="100" height="100">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <p>Reseaux sociaux :</p>
+            <a href="#">Facebook</a>
+            <a href="#">Tiktok</a>
+            <a href="#">Instagram</a>
+            <p>&copy; 2025 - Tous droits réservés</p>
+        </footer>
+    </body>
+</html>

@@ -155,3 +155,19 @@ button:hover, .btn:hover {
     transform: translatex(-50%); /* défilement infini (images dupliquées) */
   }
 }
+
+
+#notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #C5DCA0;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: 'Fredoka One', cursive;
+    display: none; /* cachée par défaut */
+    z-index: 1000;
+    max-width: 300px;
+}
