@@ -130,15 +130,6 @@ nav a:hover {
     }
 }
 
-/* ---------- MAIN ---------- */
-main {
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 12px;
-    max-width: 1000px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
 
 /* ---------- FOOTER ---------- */
 footer {
@@ -211,7 +202,7 @@ button:hover, .btn:hover {
   overflow: hidden;        /* masque le hors-écran */
   margin: 50px auto;
   padding: 20px 0;
-
+  flex-shrink: 0; /* Empêche le scroll-container d'être réduit par le flex parent */
 }
 
 .image-track {
@@ -463,5 +454,42 @@ h1 {
         width: 90vw;
         max-width: 220px;
         height: 70px;
+    }
+}
+
+/* Ajout pour coller le footer en bas sur desktop */
+@media (min-width: 900px) {
+    html, body {
+        height: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+    }
+    footer {
+        margin-top: auto;
+    }
+}
+
+/* Ajout pour coller le footer en bas sur mobile */
+@media (max-width: 899px) {
+    html, body {
+        height: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+        min-height: 0; /* Permet au contenu scrollable de s'afficher correctement */
+    }
+    footer {
+        margin-top: auto;
     }
 }

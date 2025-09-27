@@ -46,7 +46,11 @@
 <main>
     <section class="card">
         <h2>Accédez à votre compte</h2>
-        <form class="form-connect">
+        <form class="form-connect" id="form-connect">
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
             <div class="form-group">
                 <label for="email">Adresse email :</label>
                 <input type="email" id="email" name="email" required>
@@ -66,6 +70,8 @@
         </div>
     </section>
 </main>
+
+
 <!-- Footer -->
 
         <footer>
@@ -87,6 +93,30 @@ const navList = document.querySelector('.nav-list');
 burger.addEventListener('click', () => {
     navList.classList.toggle('active');
     burger.classList.toggle('active');
+});
+
+// Remplacement du bouton Connexion par Mon profil si connecté
+if(localStorage.getItem('isConnected') === 'true') {
+    const navList = document.querySelector('.nav-list');
+    if(navList) {
+        const connectBtn = navList.querySelector('.btn');
+        if(connectBtn) {
+            const profilBtn = document.createElement('a');
+            profilBtn.href = "profile.html";
+            profilBtn.className = "btn btn-profil";
+            profilBtn.textContent = "Mon profil";
+            connectBtn.parentNode.replaceChild(profilBtn, connectBtn);
+        }
+    }
+}
+
+// Simulation de connexion et redirection avec prénom
+document.getElementById('form-connect').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const prenom = document.getElementById('prenom').value;
+    localStorage.setItem('isConnected', 'true');
+    localStorage.setItem('profilPrenom', prenom);
+    window.location.href = "profile.html";
 });
 </script>
     </body>

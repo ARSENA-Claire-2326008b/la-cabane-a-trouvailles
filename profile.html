@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil - La cabane à trouvailles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style_1.css">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
+        </a>
+        <h1>La cabane à trouvailles</h1>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="prestations.html">Nos prestations</a></li>
+            <li><a href="volunteer.html">Devenir bénévole</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+            <li><a href="connect.html" class="btn btn-connect">Connexion</a></li>
+        </ul>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="card">
+        <h2 id="profil-bonjour"></h2>
+        <p>Rien n'est disponible sur votre profil à ce jour.</p>
+    </section>
+</main>
+<footer>
+    <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <span>Reseaux sociaux :</span>
+        <a href="#">Facebook</a>
+        <a href="#">Tiktok</a>
+        <a href="#">Instagram</a>
+    </div>
+    <p>&copy; 2025 - Tous droits réservés</p>
+</footer>
+<script>
+// Menu burger responsive
+const burger = document.querySelector('.burger');
+const navList = document.querySelector('.nav-list');
+burger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    burger.classList.toggle('active');
+});
+
+// Affiche le prénom dans le profil
+const prenom = localStorage.getItem('profilPrenom');
+if(prenom) {
+    document.getElementById('profil-bonjour').textContent = "Bonjour " + prenom + ", bienvenue sur votre profil";
+} else {
+    document.getElementById('profil-bonjour').textContent = "Bonjour, bienvenue sur votre profil";
+}
+</script>
+</body>
+</html>

@@ -46,7 +46,7 @@
 <main>
     <section class="card">
         <h2>Créez votre compte</h2>
-        <form class="form-signin">
+        <form class="form-signin" id="form-signin">
             <div class="form-group">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required>
@@ -95,6 +95,15 @@ const navList = document.querySelector('.nav-list');
 burger.addEventListener('click', () => {
     navList.classList.toggle('active');
     burger.classList.toggle('active');
+});
+
+// Confirmation inscription et redirection profil
+document.getElementById('form-signin').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const prenom = document.getElementById('prenom').value;
+    // Stocke le prénom pour la page profil
+    localStorage.setItem('profilPrenom', prenom);
+    window.location.href = "profile.html";
 });
 </script>
     </body>
