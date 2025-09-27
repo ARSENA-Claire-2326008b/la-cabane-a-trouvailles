@@ -63,7 +63,7 @@
                 <input type="checkbox" id="remember" name="remember">
                 <label for="remember">Se souvenir de moi</label>
             </div>
-            <button type="submit" class="btn">Se connecter</button>
+            <button type="submit" id="btn-login">Se connecter</button>
         </form>
         <div style="margin-top:1rem;">
             <a href="lost_psswd.html">Mot de passe oublié ?</a> | <a href="sign_in.html">Pas encore de compte ?</a>
@@ -95,20 +95,6 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('active');
 });
 
-// Remplacement du bouton Connexion par Mon profil si connecté
-if(localStorage.getItem('isConnected') === 'true') {
-    const navList = document.querySelector('.nav-list');
-    if(navList) {
-        const connectBtn = navList.querySelector('.btn');
-        if(connectBtn) {
-            const profilBtn = document.createElement('a');
-            profilBtn.href = "profile.html";
-            profilBtn.className = "btn btn-profil";
-            profilBtn.textContent = "Mon profil";
-            connectBtn.parentNode.replaceChild(profilBtn, connectBtn);
-        }
-    }
-}
 
 // Simulation de connexion et redirection avec prénom
 document.getElementById('form-connect').addEventListener('submit', function(e) {
