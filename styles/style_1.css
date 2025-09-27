@@ -1,11 +1,11 @@
 body {
-    background-color: #fbf8c4; 
+    background-color: #fbf8c4;
     font-family: 'Quicksand', sans-serif;
 }
 
 /* ---------- HEADER ---------- */
 header {
-    background-color: #A491D3; 
+    background-color: #A491D3;
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -20,10 +20,9 @@ header h1 {
     color: white;
 }
 
-
 .logo {
-    width: 100px;   
-    height: auto;  
+    width: 100px;
+    height: auto;
 }
 
 .logo-container {
@@ -41,19 +40,20 @@ nav ul {
 }
 
 nav a {
-    color: #ffffff; 
+    color: #ffffff;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #C5DCA0; 
+    color: #C5DCA0;
 }
 
-/* ---------- NAVBAR BURGER ----------- */
+/* ---------- NAVBAR BURGER ---------- */
 .navbar {
     position: relative;
     background: inherit;
 }
+
 .nav-list {
     display: flex;
     gap: 2rem;
@@ -63,6 +63,7 @@ nav a:hover {
     align-items: center;
     transition: max-height 0.3s;
 }
+
 .burger {
     display: none;
     flex-direction: column;
@@ -73,6 +74,7 @@ nav a:hover {
     cursor: pointer;
     gap: 6px;
 }
+
 .burger span {
     display: block;
     height: 4px;
@@ -81,77 +83,28 @@ nav a:hover {
     border-radius: 2px;
     transition: 0.3s;
 }
-@media (max-width: 900px) {
-    .nav-list {
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: #A491D3;
-        max-height: 0;
-        overflow: hidden;
-        z-index: 1000;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        transition: max-height 0.3s;
-    }
-    .nav-list.active {
-        max-height: 100vh;
-        height: 100vh;
-        padding: 0;
-        overflow: auto;
-    }
-    .nav-list li {
-        margin: 2rem 0;
-    }
-    .burger {
-        display: flex;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1100;
-    }
-}
-@media (max-width: 600px) {
-    .nav-list {
-        font-size: 1rem;
-    }
-    .burger {
-        width: 32px;
-        height: 32px;
-    }
-    .burger span {
-        width: 22px;
-        height: 3px;
-    }
-}
-
 
 /* ---------- FOOTER ---------- */
 footer {
-    background-color: #A491D3; 
+    background-color: #A491D3;
     color: white;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Fredoka One', cursive;
 }
 
-/* Footer: police Fredoka One pour tout le texte */
-footer,
 footer a,
 footer p,
 footer div,
 footer span {
-    font-family: 'Fredoka One', cursive;
+    font-family: inherit;
 }
 
 /* ---------- BOUTONS ---------- */
-button, .btn {
+button,
+.btn {
     background-color: #C5DCA0;
     color: #333;
     border: none;
@@ -160,14 +113,15 @@ button, .btn {
     font-family: 'Fredoka One', cursive;
 }
 
-button:hover, .btn:hover {
+button:hover,
+.btn:hover {
     background-color: #C5DCA0;
     color: white;
 }
 
-
+/* ---------- CARDS ---------- */
 .card {
-    background: #e6dcfe; 
+    background: #e6dcfe;
     border-radius: 20px;
     color: #333;
     margin: 5% auto;
@@ -175,20 +129,20 @@ button:hover, .btn:hover {
     max-width: 700px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    
 }
 
 .card h2 {
     font-family: 'Fredoka One', cursive;
     font-weight: 400;
-    color: #5c4494;  
+    color: #5c4494;
 }
 
 .card p {
     font-family: 'Fredoka One', cursive;
-    color: #9884c5; 
+    color: #9884c5;
 }
 
+/* ---------- CARDS PRODUITS ---------- */
 .card-row {
     display: flex;
     flex-wrap: wrap;
@@ -197,163 +151,6 @@ button:hover, .btn:hover {
     margin-bottom: 2rem;
 }
 
-.scroll-container {
-  width: 100%;             /* prend toute la largeur */
-  overflow: hidden;        /* masque le hors-écran */
-  margin: 50px auto;
-  padding: 20px 0;
-  flex-shrink: 0; /* Empêche le scroll-container d'être réduit par le flex parent */
-}
-
-.image-track {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr); /* 2 lignes */
-  grid-auto-flow: column;              /* colonnes en continu */
-  gap: 30px;
-  animation: scroll 20s linear infinite; /* défilement infini */
-}
-
-.image-item img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.image-track .image-item:nth-child(2n+2) {
-    transform: translatex(50%);
-}
-
-
-/* Animation horizontale continue */
-@keyframes scroll {
-  from {
-    transform: translatex(0);
-  }
-  to {
-    transform: translatex(-50%); /* défilement infini (images dupliquées) */
-  }
-}
-
-
-#notification {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    max-width: 400px;
-    height: auto;
-    background: rgba(164,145,211,0.97); /* couleur footer + opacité */
-    color: #fff;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.2rem;
-    z-index: 2000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
-    gap: 2rem;
-    border-radius: 16px;
-    padding: 2rem 1rem;
-}
-
-/* ----------- FORMULAIRES RESPONSIVE ----------- */
-.form-contact, .form-connect, .form-signin, .form-lostpsswd {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-.form-contact input, .form-contact textarea,
-.form-connect input,
-.form-signin input,
-.form-lostpsswd input {
-    padding: 0.7rem;
-    border-radius: 6px;
-    border: 1px solid #A491D3;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-}
-.form-contact button, .form-connect button, .form-signin button, .form-lostpsswd button {
-    margin-top: 1rem;
-}
-@media (max-width: 600px) {
-    .form-contact, .form-connect, .form-signin, .form-lostpsswd {
-        padding: 0.7rem;
-        max-width: 95vw;
-    }
-}
-
-/* Volunteer form & all forms: champs arrondis, fond blanc */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    border-radius: 8px;
-    background: #fff;
-    border: 1.5px solid #A491D3;
-    font-size: 1rem;
-    font-family: inherit;
-    padding: 0.7rem;
-    transition: border 0.2s;
-    box-sizing: border-box;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-select:focus,
-textarea:focus {
-    border: 2px solid #A491D3;
-    outline: none;
-}
-
-/* Labels des champs de texte : police Fredoka One */
-label,
-.form-group label,
-.volunteer-form label {
-    font-family: 'Fredoka One', cursive;
-    color: #A491D3;
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-/* Style pour le titre "Nos produits à pré-commander" */
-h1 {
-    font-family: 'Fredoka One', cursive;
-    color: #5c4494;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-}
-
-/* Style pour la section card-row */
-.card-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-/* Style pour chaque card produit */
 .card-row .card {
     background: #fff;
     border-radius: 16px;
@@ -367,6 +164,7 @@ h1 {
     gap: 0.8rem;
     transition: box-shadow 0.2s;
 }
+
 .card-row .card:hover {
     box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
 }
@@ -416,50 +214,264 @@ h1 {
     margin-top: 0.5rem;
     transition: background 0.2s;
 }
+
 .card-row .card button:hover {
     background: #2e7d32;
     color: #fff;
 }
 
-/* Responsive pour les produits à précommander */
+/* ---------- IMAGE SCROLLER ---------- */
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 50px auto;
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.image-track {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+    gap: 30px;
+    animation: scroll 20s linear infinite;
+}
+
+.image-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.image-track .image-item:nth-child(2n+2) {
+    transform: translatex(50%);
+}
+
+@keyframes scroll {
+    from { transform: translatex(0); }
+    to { transform: translatex(-50%); }
+}
+
+/* ---------- NOTIFICATION ---------- */
+#notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    background: rgba(164,145,211,0.97);
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    z-index: 2000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    gap: 2rem;
+    border-radius: 16px;
+    padding: 2rem 1rem;
+}
+
+/* ---------- FORMULAIRES ---------- */
+.form-contact,
+.form-connect,
+.form-signin,
+.form-lostpsswd {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-contact input,
+.form-contact textarea,
+.form-connect input,
+.form-signin input,
+.form-lostpsswd input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid #A491D3;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    background: #fff;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid #A491D3;
+    outline: none;
+}
+
+.form-contact button,
+.form-connect button,
+.form-signin button,
+.form-lostpsswd button {
+    margin-top: 1rem;
+}
+
+label,
+.form-group label,
+.volunteer-form label {
+    font-family: 'Fredoka One', cursive;
+    color: #A491D3;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* ---------- TITRES ---------- */
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #5c4494;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
 @media (max-width: 900px) {
-    .card-row {
-        gap: 1rem;
+    .nav-list {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #A491D3;
+        max-height: 0;
+        overflow: hidden;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        transition: max-height 0.3s;
     }
+
+    .nav-list.active {
+        max-height: 100vh;
+        height: 100vh;
+        padding: 0;
+        overflow: auto;
+    }
+
+    .nav-list li { margin: 2rem 0; }
+
+    .burger {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+    }
+
+    .card-row { gap: 1rem; }
+
     .card-row .card {
         max-width: 45vw;
         padding: 1rem 0.5rem;
     }
+
     .card-row .card img {
         width: 120px;
         height: 80px;
     }
+
+    html,
+    body {
+        height: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+        min-height: 0;
+    }
+
+    footer { margin-top: auto; }
 }
+
 @media (max-width: 600px) {
+    .nav-list { font-size: 1rem; }
+
+    .burger {
+        width: 32px;
+        height: 32px;
+    }
+
+    .burger span {
+        width: 22px;
+        height: 3px;
+    }
+
     h1 {
         font-size: 1.3rem;
         margin-top: 1.2rem;
         margin-bottom: 1rem;
     }
+
     .card-row {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
+
     .card-row .card {
         max-width: 95vw;
         padding: 0.7rem 0.3rem;
     }
+
     .card-row .card img {
         width: 90vw;
         max-width: 220px;
         height: 70px;
     }
+
+    .form-contact,
+    .form-connect,
+    .form-signin,
+    .form-lostpsswd {
+        padding: 0.7rem;
+        max-width: 95vw;
+    }
 }
 
-/* Ajout pour coller le footer en bas sur desktop */
 @media (min-width: 900px) {
-    html, body {
+    html,
+    body {
         height: 100%;
         min-height: 100vh;
         margin: 0;
@@ -467,29 +479,8 @@ h1 {
         display: flex;
         flex-direction: column;
     }
-    main {
-        flex: 1 0 auto;
-    }
-    footer {
-        margin-top: auto;
-    }
-}
 
-/* Ajout pour coller le footer en bas sur mobile */
-@media (max-width: 899px) {
-    html, body {
-        height: 100%;
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
-    main {
-        flex: 1 0 auto;
-        min-height: 0; /* Permet au contenu scrollable de s'afficher correctement */
-    }
-    footer {
-        margin-top: auto;
-    }
+    main { flex: 1 0 auto; }
+
+    footer { margin-top: auto; }
 }
