@@ -1,4 +1,4 @@
-<!--@authors ARSENA Claire SANTOS-JORGE Francisco-->
+<!-- @authors ARSENA Claire SANTOS-JORGE Francisco -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,14 +10,20 @@
     <meta name="keywords" content="Plan de campagne association la cabane à trouvailles iut aix en provence but gea gmp mlt info tc bde développement durable contribution Claire ARSENA BUT2 - INFO Matthieu BARTOLO BUT2 - GMP Samia BEN ABDELLAH BUT2 - GEA Naël CLAVE BUT2 - MLT Lucille FALCINELLI BUT2 - TC Mathieu HAENSCH BUT2 - GMP Leny IMBERT BUT2 - GEA Omar salim NAKIB BUT2 - TC Aurelien POGGI BUT2 - GEA Francisco SANTOS JORGE BUT2 - INFO Athina VIDAL BUT2 - TC">
     <meta name="language" content="French">
     <meta name="revisit-after" content="10 days">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/style_1.css">
+
     <title>La cabane à trouvailles - Mot de passe oublié</title>
-    <!--favicon-->
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="img/Logo_entier.svg">
 
-        <!-- Open Graph / WhatsApp preview -->
+    <!-- Open Graph / WhatsApp preview -->
     <meta property="og:image" content="img/logo-lcat.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="512">
@@ -25,88 +31,99 @@
     <meta property="og:title" content="La cabane à trouvailles">
     <meta property="og:description" content="Découvrez nos prestations et produits à Cabriès !">
     <meta property="og:url" content="https://votre-site.fr/prestations.html">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="img/logo-lcat.png">
-
 </head>
 <body>
-<!-- Header -->
-<header>
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
-        </a>
-        <h1>La cabane à trouvailles</h1>
-    </div>
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="prestations.html">Nos prestations</a></li>
-            <li><a href="volunteer.html">Devenir bénévole</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
-            <li><a href="connect.html" class="btn">Connexion</a></li>
-        </ul>
-        <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
+            </a>
+            <h1>La cabane à trouvailles</h1>
         </div>
-    </nav>
-</header>
-<main>
-    <section class="card">
-        <h2>Récupération de mot de passe</h2>
-        <p>Entrez votre adresse e-mail pour recevoir un lien de réinitialisation de votre mot de passe.</p>
-        <form class="form-lostpsswd" id="form-lostpsswd">
-            <div class="form-group">
-                <label for="email">Adresse e-mail :</label>
-                <input type="email" id="email" name="email" required>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="prestations.html">Nos prestations</a></li>
+                <li><a href="volunteer.html">Devenir bénévole</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="connect.html" class="btn">Connexion</a></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <button type="submit" class="btn">Envoyer le lien de récupération</button>
-        </form>
-        <!-- Notification -->
-        <div id="notification" style="display:none;">
-            <span>Un lien de réinitialisation a été envoyé à votre adresse e-mail.</span>
-            <button id="notif-ok-btn">OK</button>
-        </div>
-        <div style="margin-top:1rem;">
-            <a href="connect.html">Retour à la connexion</a>
-        </div>
-    </section>
-</main>
-<footer>
-    <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-        <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
-        <span>Reseaux sociaux :</span>
-        <a href="#">Facebook</a>
-        <a href="#">Tiktok</a>
-        <a href="#">Instagram</a>
-    </div>
-    <p>&copy; 2025 - Tous droits réservés</p>
-</footer>
-<script>
-// Menu burger responsive
-const burger = document.querySelector('.burger');
-const navList = document.querySelector('.nav-list');
-burger.addEventListener('click', () => {
-    navList.classList.toggle('active');
-    burger.classList.toggle('active');
-});
+        </nav>
+    </header>
 
-// Notification et redirection
-const form = document.getElementById('form-lostpsswd');
-const notif = document.getElementById('notification');
-const okBtn = document.getElementById('notif-ok-btn');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    notif.style.display = 'flex';
-});
-okBtn.addEventListener('click', function() {
-    window.location.href = 'connect.html';
-});
-</script>
+    <!-- Main -->
+    <main>
+        <section class="card">
+            <h2>Récupération de mot de passe</h2>
+            <p>Entrez votre adresse e-mail pour recevoir un lien de réinitialisation de votre mot de passe.</p>
+            
+            <form class="form-lostpsswd" id="form-lostpsswd">
+                <div class="form-group">
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn">Envoyer le lien de récupération</button>
+            </form>
+
+            <!-- Notification -->
+            <div id="notification" style="display:none;">
+                <span>Un lien de réinitialisation a été envoyé à votre adresse e-mail.</span>
+                <button id="notif-ok-btn">OK</button>
+            </div>
+
+            <div style="margin-top:1rem;">
+                <a href="connect.html">Retour à la connexion</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <span>Reseaux sociaux :</span>
+            <a href="#">Facebook</a>
+            <a href="#">Tiktok</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2025 - Tous droits réservés</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Menu burger responsive
+        const burger = document.querySelector('.burger');
+        const navList = document.querySelector('.nav-list');
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Notification et redirection
+        const form = document.getElementById('form-lostpsswd');
+        const notif = document.getElementById('notification');
+        const okBtn = document.getElementById('notif-ok-btn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            notif.style.display = 'flex';
+        });
+
+        okBtn.addEventListener('click', function() {
+            window.location.href = 'connect.html';
+        });
+    </script>
 </body>
 </html>

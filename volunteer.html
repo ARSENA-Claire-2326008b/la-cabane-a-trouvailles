@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devenir bénévole - La cabane à trouvailles</title>
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/style_1.css">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon-16x16.webp" sizes="16x16">
     <link rel="icon" type="image/png" href="img/favicon-32x32.webp" sizes="32x32">
     <link rel="icon" type="image/png" href="img/favicon-48x48.webp" sizes="48x48">
     <link rel="apple-touch-icon" href="img/favicon-180x180.webp" sizes="180x180">
     <link rel="shortcut icon" href="img/favicon.ico">
-    <!--favicon-->
     <link rel="icon" type="image/svg+xml" href="img/Logo_entier.svg">
 
-        <!-- Open Graph / WhatsApp preview -->
+    <!-- Open Graph / WhatsApp preview -->
     <meta property="og:image" content="img/logo-lcat.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="512">
@@ -23,18 +28,20 @@
     <meta property="og:title" content="La cabane à trouvailles">
     <meta property="og:description" content="Découvrez nos prestations et produits à Cabriès !">
     <meta property="og:url" content="https://votre-site.fr/prestations.html">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="img/logo-lcat.png">
 </head>
 <body>
-<header>
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
-        </a>
-        <h1>La cabane à trouvailles</h1>
-    </div>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
+            </a>
+            <h1>La cabane à trouvailles</h1>
+        </div>
         <nav class="navbar">
             <ul class="nav-list">
                 <li><a href="index.html">Accueil</a></li>
@@ -50,10 +57,15 @@
             </div>
         </nav>
     </header>
+
+    <!-- Main -->
     <main>
         <section class="card">
             <h2>Devenir bénévole</h2>
-            <p>Rejoignez notre équipe et participez à une initiative solidaire et durable ! Remplissez le formulaire ci-dessous pour proposer votre candidature en tant que bénévole.</p>
+            <p>
+                Rejoignez notre équipe et participez à une initiative solidaire et durable ! 
+                Remplissez le formulaire ci-dessous pour proposer votre candidature en tant que bénévole.
+            </p>
             <form class="volunteer-form" autocomplete="off">
                 <div>
                     <label for="nom">Nom *</label>
@@ -86,31 +98,37 @@
                 </div>
                 <div>
                     <button type="submit" disabled>Envoyer</button>
-                    <p style="font-size:0.9em;color:#888;">* Ce formulaire est à titre informatif, aucune donnée n'est envoyée.</p>
+                    <p style="font-size:0.9em; color:#888;">
+                        * Ce formulaire est à titre informatif, aucune donnée n'est envoyée.
+                    </p>
                 </div>
             </form>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
             <a href="#">Mentions légales</a>
             <a href="#">Politique de confidentialité</a>
-            <span>Reseaux sociaux :</span>
+            <span>Réseaux sociaux :</span>
             <a href="#">Facebook</a>
             <a href="#">Tiktok</a>
             <a href="#">Instagram</a>
         </div>
         <p>&copy; 2025 - Tous droits réservés</p>
     </footer>
+
+    <!-- Script -->
     <script>
-    // Menu burger responsive
-    const burger = document.querySelector('.burger');
-    const navList = document.querySelector('.nav-list');
-    burger.addEventListener('click', () => {
-        navList.classList.toggle('active');
-        burger.classList.toggle('active');
-    });
+        // Menu burger responsive
+        const burger = document.querySelector('.burger');
+        const navList = document.querySelector('.nav-list');
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
     </script>
 </body>
 </html>

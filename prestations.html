@@ -1,4 +1,4 @@
-<!--@authors ARSENA Claire SANTOS-JORGE Francisco-->
+<!-- @authors ARSENA Claire SANTOS-JORGE Francisco -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,12 +10,17 @@
     <meta name="keywords" content="Plan de campagne association la cabane à trouvailles iut aix en provence but gea gmp mlt info tc bde développement durable contribution Claire ARSENA BUT2 - INFO Matthieu BARTOLO BUT2 - GMP Samia BEN ABDELLAH BUT2 - GEA Naël CLAVE BUT2 - MLT Lucille FALCINELLI BUT2 - TC Mathieu HAENSCH BUT2 - GMP Leny IMBERT BUT2 - GEA Omar salim NAKIB BUT2 - TC Aurelien POGGI BUT2 - GEA Francisco SANTOS JORGE BUT2 - INFO Athina VIDAL BUT2 - TC">
     <meta name="language" content="French">
     <meta name="revisit-after" content="10 days">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/style_1.css">
+
     <title>La cabane à trouvailles - Prestations</title>
 
- <!--favicon-->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="img/Logo_entier.svg">
 
     <!-- Open Graph / WhatsApp preview -->
@@ -26,191 +31,189 @@
     <meta property="og:title" content="La cabane à trouvailles">
     <meta property="og:description" content="Découvrez nos prestations et produits à Cabriès !">
     <meta property="og:url" content="https://votre-site.fr/prestations.html">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="img/logo-lcat.png">
-
 </head>
 <body>
-
-<!-- Header -->
-<header>
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
-        </a>
-        <h1>La cabane à trouvailles</h1>
-    </div>
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="prestations.html">Nos prestations</a></li>
-            <li><a href="volunteer.html">Devenir bénévole</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
-            <li><a href="connect.html" class="btn">Connexion</a></li>
-        </ul>
-        <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
+            </a>
+            <h1>La cabane à trouvailles</h1>
         </div>
-    </nav>
-</header>
-
-    <!-- Page -->
-
-<section class="card">
-    <h2>Ce que nous vendons</h2>
-    <p>A la cabane à trouvailles, vous pourrez retrouver de nombreux habits pour vos enfants de 0 à 12 ans ainsi que de nombreux jouets.</p>
-</section>
-
-<div class="scroll-container">
-    <div class="image-track">
-    <!-- Images dupliquées pour effet infini -->
-    <div class="image-item"><img src="img/doudou.jpg" alt=""></div>
-    <div class="image-item"><img src="img/poussette.jpg" alt=""></div>
-    <div class="image-item"><img src="img/lego.png" alt=""></div>
-    <div class="image-item"><img src="img/jouet.webp" alt=""></div>  
-    <div class="image-item"><img src="img/barbie.jpg" alt=""></div>
-    <div class="image-item"><img src="img/jeu.jpg" alt=""></div>
-    <div class="image-item"><img src="img/voiture.jpg" alt=""></div>
-    <div class="image-item"><img src="img/doudou.jpg" alt=""></div>
-    <div class="image-item"><img src="img/poussette.jpg" alt=""></div>
-    <div class="image-item"><img src="img/lego.png" alt=""></div>
-    <div class="image-item"><img src="img/jouet.webp" alt=""></div>  
-    <div class="image-item"><img src="img/barbie.jpg" alt=""></div>
-    <div class="image-item"><img src="img/jeu.jpg" alt=""></div>
-    <div class="image-item"><img src="img/voiture.jpg" alt=""></div>
-    </div>
-  </div>
-
-<section class="card">
-    <h2>Nous reprenons tout !</h2>
-    <p>
-        Nous acceptons tous les jouets, habits et articles de puériculture, même abîmés.<br>
-        Une couturière bénévole s'occupe de leur remise en état pour leur offrir une seconde vie.<br>
-        N'hésitez pas à nous apporter vos dons, ils seront utiles à d'autres familles !
-    </p>
-</section>
-
-  <h1>Nos produits à pré-commander</h1>
-    <section class="card-row">
-        <!-- Poussettes -->
-        <article class="card">
-            <h2>Poussette</h2>
-            <img src="img/poussette.jpg" alt="Poussette" style="width:200px;height:150px;border-radius:12px;">
-            <p>Confort et sécurité pour vos promenades.</p>
-            <p>Prix : 15€</p>
-            <button onclick="precommander('Poussette')">Pré-commander</button>
-        </article>
-
-        <!-- Habits -->
-        <article class="card">
-            <h2>Habits</h2>
-            <img src="img/habits.webp" alt="Habits" style="width:200px;height:150px;border-radius:12px;">
-            <p>Vêtements stylés pour enfants de 0 à 12 ans.</p>
-            <p>Prix : à partir de 2€</p>
-            <button onclick="precommander('Habits')">Pré-commander</button>
-        </article>
-
-        <!-- Barbie -->
-        <article class="card">
-            <h2>Barbie</h2>
-            <img src="img/barbie.jpg" alt="Barbie" style="width:200px;height:150px;border-radius:12px;">
-            <p>Barbies pour le plaisir de jouer et partager.</p>
-            <p>Prix : 2€</p>
-            <button onclick="precommander('Barbie')">Pré-commander</button>
-        </article>
-
-        <!-- Voitures -->
-        <article class="card">
-            <h2>Voitures</h2>
-            <img src="img/voiture.jpg" alt="Voitures" style="width:200px;height:150px;border-radius:12px;">
-            <p>Mini voitures pour collection ou jeu.</p>
-            <p>Prix : 1€</p>
-            <button onclick="precommander('Voitures')">Pré-commander</button>
-        </article>
-
-        <!-- Lego -->
-        <article class="card">
-            <h2>Lego</h2>
-            <img src="img/lego.png" alt="Lego" style="width:200px;height:150px;border-radius:12px;">
-            <p>Construisez vos univers avec Lego.</p>
-            <p>Prix : 2€</p>
-            <button onclick="precommander('Lego')">Pré-commander</button>
-        </article>
-
-        <!-- Doudous -->
-        <article class="card">
-            <h2>Doudou</h2>
-            <img src="img/doudou.jpg" alt="Doudou" style="width:200px;height:150px;border-radius:12px;">
-            <p>Doudous doux pour accompagner vos enfants.</p>
-            <p>Prix : 1€</p>
-            <button onclick="precommander('Doudou')">Pré-commander</button>
-        </article>
-
-        <!-- Jeux de société -->
-        <article class="card">
-            <h2>Jeux de société</h2>
-            <img src="img/jeu.jpg" alt="Jeux de société" style="width:200px;height:150px;border-radius:12px;">
-            <p>Jeux pour toute la famille et amis.</p>
-            <p>Prix : 4€</p>
-            <button onclick="precommander('Jeux de société')">Pré-commander</button>
-        </article>
-    </section>
-</main>
-
-<!-- Notification -->
-<div id="notification"></div>
-
-<script>
-function precommander(produit) {
-    // Demander prénom et nom
-    let prenom = prompt("Entrez votre prénom pour la pré-commande de " + produit + " :");
-    if (!prenom) return;
-    let nom = prompt("Entrez votre nom :");
-    if (!nom) return;
-
-    // Construire le message
-    let message = "Merci " + prenom + " " + nom + " pour ta précommande de " + produit + " !\nTu pourras la récupérer en magasin.";
-
-    // Afficher la notification
-    let notif = document.getElementById('notification');
-    notif.textContent = message;
-    notif.style.display = 'block';
-
-    // Disparaît après 5 secondes
-    setTimeout(() => {
-        notif.style.display = 'none';
-    }, 5000);
-}
-
-</script>
-
-
-
-<!-- Footer -->
-
-        <footer>
-            <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-                <a href="#">Mentions légales</a>
-                <a href="#">Politique de confidentialité</a>
-                <span>Reseaux sociaux :</span>
-                <a href="#">Facebook</a>
-                <a href="#">Tiktok</a>
-                <a href="#">Instagram</a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="prestations.html">Nos prestations</a></li>
+                <li><a href="volunteer.html">Devenir bénévole</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="connect.html" class="btn">Connexion</a></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <p>&copy; 2025 - Tous droits réservés</p>
-        </footer>
-        <script>
-// Menu burger responsive
-const burger = document.querySelector('.burger');
-const navList = document.querySelector('.nav-list');
-burger.addEventListener('click', () => {
-    navList.classList.toggle('active');
-    burger.classList.toggle('active');
-});
-</script>
-    </body>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="card">
+            <h2>Ce que nous vendons</h2>
+            <p>A la cabane à trouvailles, vous pourrez retrouver de nombreux habits pour vos enfants de 0 à 12 ans ainsi que de nombreux jouets.</p>
+        </section>
+
+        <div class="scroll-container">
+            <div class="image-track">
+                <!-- Images dupliquées pour effet infini -->
+                <div class="image-item"><img src="img/doudou.jpg" alt=""></div>
+                <div class="image-item"><img src="img/poussette.jpg" alt=""></div>
+                <div class="image-item"><img src="img/lego.png" alt=""></div>
+                <div class="image-item"><img src="img/jouet.webp" alt=""></div>  
+                <div class="image-item"><img src="img/barbie.jpg" alt=""></div>
+                <div class="image-item"><img src="img/jeu.jpg" alt=""></div>
+                <div class="image-item"><img src="img/voiture.jpg" alt=""></div>
+
+                <!-- Duplication -->
+                <div class="image-item"><img src="img/doudou.jpg" alt=""></div>
+                <div class="image-item"><img src="img/poussette.jpg" alt=""></div>
+                <div class="image-item"><img src="img/lego.png" alt=""></div>
+                <div class="image-item"><img src="img/jouet.webp" alt=""></div>  
+                <div class="image-item"><img src="img/barbie.jpg" alt=""></div>
+                <div class="image-item"><img src="img/jeu.jpg" alt=""></div>
+                <div class="image-item"><img src="img/voiture.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Nous reprenons tout !</h2>
+            <p>
+                Nous acceptons tous les jouets, habits et articles de puériculture, même abîmés.<br>
+                Une couturière bénévole s'occupe de leur remise en état pour leur offrir une seconde vie.<br>
+                N'hésitez pas à nous apporter vos dons, ils seront utiles à d'autres familles !
+            </p>
+        </section>
+
+        <h1>Nos produits à pré-commander</h1>
+        <section class="card-row">
+            <!-- Poussettes -->
+            <article class="card">
+                <h2>Poussette</h2>
+                <img src="img/poussette.jpg" alt="Poussette" style="width:200px;height:150px;border-radius:12px;">
+                <p>Confort et sécurité pour vos promenades.</p>
+                <p>Prix : 15€</p>
+                <button onclick="precommander('Poussette')">Pré-commander</button>
+            </article>
+
+            <!-- Habits -->
+            <article class="card">
+                <h2>Habits</h2>
+                <img src="img/habits.webp" alt="Habits" style="width:200px;height:150px;border-radius:12px;">
+                <p>Vêtements stylés pour enfants de 0 à 12 ans.</p>
+                <p>Prix : à partir de 2€</p>
+                <button onclick="precommander('Habits')">Pré-commander</button>
+            </article>
+
+            <!-- Barbie -->
+            <article class="card">
+                <h2>Barbie</h2>
+                <img src="img/barbie.jpg" alt="Barbie" style="width:200px;height:150px;border-radius:12px;">
+                <p>Barbies pour le plaisir de jouer et partager.</p>
+                <p>Prix : 2€</p>
+                <button onclick="precommander('Barbie')">Pré-commander</button>
+            </article>
+
+            <!-- Voitures -->
+            <article class="card">
+                <h2>Voitures</h2>
+                <img src="img/voiture.jpg" alt="Voitures" style="width:200px;height:150px;border-radius:12px;">
+                <p>Mini voitures pour collection ou jeu.</p>
+                <p>Prix : 1€</p>
+                <button onclick="precommander('Voitures')">Pré-commander</button>
+            </article>
+
+            <!-- Lego -->
+            <article class="card">
+                <h2>Lego</h2>
+                <img src="img/lego.png" alt="Lego" style="width:200px;height:150px;border-radius:12px;">
+                <p>Construisez vos univers avec Lego.</p>
+                <p>Prix : 2€</p>
+                <button onclick="precommander('Lego')">Pré-commander</button>
+            </article>
+
+            <!-- Doudous -->
+            <article class="card">
+                <h2>Doudou</h2>
+                <img src="img/doudou.jpg" alt="Doudou" style="width:200px;height:150px;border-radius:12px;">
+                <p>Doudous doux pour accompagner vos enfants.</p>
+                <p>Prix : 1€</p>
+                <button onclick="precommander('Doudou')">Pré-commander</button>
+            </article>
+
+            <!-- Jeux de société -->
+            <article class="card">
+                <h2>Jeux de société</h2>
+                <img src="img/jeu.jpg" alt="Jeux de société" style="width:200px;height:150px;border-radius:12px;">
+                <p>Jeux pour toute la famille et amis.</p>
+                <p>Prix : 4€</p>
+                <button onclick="precommander('Jeux de société')">Pré-commander</button>
+            </article>
+        </section>
+    </main>
+
+    <!-- Notification -->
+    <div id="notification"></div>
+
+    <!-- Scripts -->
+    <script>
+        function precommander(produit) {
+            // Demander prénom et nom
+            let prenom = prompt("Entrez votre prénom pour la pré-commande de " + produit + " :");
+            if (!prenom) return;
+            let nom = prompt("Entrez votre nom :");
+            if (!nom) return;
+
+            // Construire le message
+            let message = "Merci " + prenom + " " + nom + " pour ta précommande de " + produit + " !\nTu pourras la récupérer en magasin.";
+
+            // Afficher la notification
+            let notif = document.getElementById('notification');
+            notif.textContent = message;
+            notif.style.display = 'block';
+
+            // Disparaît après 5 secondes
+            setTimeout(() => {
+                notif.style.display = 'none';
+            }, 5000);
+        }
+
+        // Menu burger responsive
+        const burger = document.querySelector('.burger');
+        const navList = document.querySelector('.nav-list');
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <span>Reseaux sociaux :</span>
+            <a href="#">Facebook</a>
+            <a href="#">Tiktok</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2025 - Tous droits réservés</p>
+    </footer>
+</body>
 </html>
+  
