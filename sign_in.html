@@ -23,7 +23,9 @@
 <!-- Header -->
 <header>
     <div class="logo-container">
-        <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
+        <a href="index.html">
+            <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
+        </a>
         <h1>La cabane à trouvailles</h1>
     </div>
     <nav class="navbar">
@@ -72,19 +74,21 @@
         </div>
     </section>
 </main>
-<footer>
-    <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-        <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
-        <span>Reseaux sociaux :</span>
-        <a href="#">Facebook</a>
-        <a href="#">Tiktok</a>
-        <a href="#">Instagram</a>
-    </div>
-    <p>&copy; 2025 - Tous droits réservés</p>
-</footer>
-<script>
+<!-- Footer -->
+
+        <footer>
+            <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <span>Reseaux sociaux :</span>
+                <a href="#">Facebook</a>
+                <a href="#">Tiktok</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+        </footer>
+        <script>
 // Menu burger responsive
 const burger = document.querySelector('.burger');
 const navList = document.querySelector('.nav-list');
@@ -93,5 +97,5 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('active');
 });
 </script>
-</body>
+    </body>
 </html>

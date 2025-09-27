@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devenir bénévole - La cabane à trouvailles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style_1.css">
+    <link rel="icon" type="image/png" href="img/favicon-16x16.webp" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.webp" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-48x48.webp" sizes="48x48">
+    <link rel="apple-touch-icon" href="img/favicon-180x180.webp" sizes="180x180">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="img/logo-lcat.png" alt="Logo La cabane à trouvailles" class="logo">
+        </a>
+        <h1>La cabane à trouvailles</h1>
+    </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="prestations.html">Nos prestations</a></li>
+                <li><a href="volunteer.html">Devenir bénévole</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="connect.html" class="btn">Connexion</a></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Devenir bénévole</h2>
+            <p>Rejoignez notre équipe et participez à une initiative solidaire et durable ! Remplissez le formulaire ci-dessous pour proposer votre candidature en tant que bénévole.</p>
+            <form class="volunteer-form" autocomplete="off">
+                <div>
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div>
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone">
+                </div>
+                <div>
+                    <label for="disponibilite">Disponibilités *</label>
+                    <select id="disponibilite" name="disponibilite" required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="semaine">En semaine</option>
+                        <option value="weekend">Le week-end</option>
+                        <option value="occasionnel">Occasionnellement</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="motivation">Pourquoi souhaitez-vous devenir bénévole ?</label>
+                    <textarea id="motivation" name="motivation" rows="4"></textarea>
+                </div>
+                <div>
+                    <button type="submit" disabled>Envoyer</button>
+                    <p style="font-size:0.9em;color:#888;">* Ce formulaire est à titre informatif, aucune donnée n'est envoyée.</p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <img src="img/Logo_entier.svg" alt="Logo de La cabane à trouvailles" class="logo">
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <span>Reseaux sociaux :</span>
+            <a href="#">Facebook</a>
+            <a href="#">Tiktok</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2025 - Tous droits réservés</p>
+    </footer>
+    <script>
+    // Menu burger responsive
+    const burger = document.querySelector('.burger');
+    const navList = document.querySelector('.nav-list');
+    burger.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        burger.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

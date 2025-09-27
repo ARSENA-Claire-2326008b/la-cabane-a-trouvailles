@@ -150,6 +150,15 @@ footer {
     align-items: center;
 }
 
+/* Footer: police Fredoka One pour tout le texte */
+footer,
+footer a,
+footer p,
+footer div,
+footer span {
+    font-family: 'Fredoka One', cursive;
+}
+
 /* ---------- BOUTONS ---------- */
 button, .btn {
     background-color: #C5DCA0;
@@ -191,10 +200,10 @@ button:hover, .btn:hover {
 
 .card-row {
     display: flex;
-    gap: 20px; /* Espace entre les cartes */
-    justify-content: center; /* Centre les cartes horizontalement */
-    align-items: flex-start; /* Aligne les cartes verticalement */
-    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .scroll-container {
@@ -240,17 +249,25 @@ button:hover, .btn:hover {
 
 #notification {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #C5DCA0;
-    color: #333;
-    padding: 15px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    background: rgba(164,145,211,0.97); /* couleur footer + opacité */
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Fredoka One', cursive;
-    display: none; /* cachée par défaut */
-    z-index: 1000;
-    max-width: 300px;
+    font-size: 1.2rem;
+    z-index: 2000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    gap: 2rem;
+    border-radius: 16px;
+    padding: 2rem 1rem;
 }
 
 /* ----------- FORMULAIRES RESPONSIVE ----------- */
@@ -287,5 +304,164 @@ button:hover, .btn:hover {
     .form-contact, .form-connect, .form-signin, .form-lostpsswd {
         padding: 0.7rem;
         max-width: 95vw;
+    }
+}
+
+/* Volunteer form & all forms: champs arrondis, fond blanc */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    border-radius: 8px;
+    background: #fff;
+    border: 1.5px solid #A491D3;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 0.7rem;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid #A491D3;
+    outline: none;
+}
+
+/* Labels des champs de texte : police Fredoka One */
+label,
+.form-group label,
+.volunteer-form label {
+    font-family: 'Fredoka One', cursive;
+    color: #A491D3;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Style pour le titre "Nos produits à pré-commander" */
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #5c4494;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Style pour la section card-row */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Style pour chaque card produit */
+.card-row .card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.07);
+    padding: 1.5rem 1rem;
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    transition: box-shadow 0.2s;
+}
+.card-row .card:hover {
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+}
+
+.card-row .card h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #A491D3;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.card-row .card img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    background: #f6f6f6;
+    border: 1px solid #eaeaea;
+}
+
+.card-row .card p {
+    color: #444;
+    font-size: 1rem;
+    margin: 0.2rem 0;
+    text-align: center;
+}
+
+.card-row .card .price,
+.card-row .card p:contains("Prix") {
+    font-weight: bold;
+    color: #2e7d32;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+.card-row .card button {
+    background: #A491D3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+.card-row .card button:hover {
+    background: #2e7d32;
+    color: #fff;
+}
+
+/* Responsive pour les produits à précommander */
+@media (max-width: 900px) {
+    .card-row {
+        gap: 1rem;
+    }
+    .card-row .card {
+        max-width: 45vw;
+        padding: 1rem 0.5rem;
+    }
+    .card-row .card img {
+        width: 120px;
+        height: 80px;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.3rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .card-row .card {
+        max-width: 95vw;
+        padding: 0.7rem 0.3rem;
+    }
+    .card-row .card img {
+        width: 90vw;
+        max-width: 220px;
+        height: 70px;
     }
 }
