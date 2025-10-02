@@ -129,6 +129,12 @@ button:hover,
     max-width: 700px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transform: scale(1.03);
 }
 
 .card h2 {
@@ -162,11 +168,12 @@ button:hover,
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s ease-in-out;
 }
 
 .card-row .card:hover {
     box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+    transform: scale(1.05);
 }
 
 .card-row .card h2 {
@@ -219,6 +226,7 @@ button:hover,
     background: #2e7d32;
     color: #fff;
 }
+
 
 /* ---------- IMAGE SCROLLER ---------- */
 .scroll-container {
@@ -480,7 +488,11 @@ h1 {
         flex-direction: column;
     }
 
-    main { flex: 1 0 auto; }
+    main {
+        flex: 1 0 auto;
+        min-height: 0;
+    }
 
     footer { margin-top: auto; }
 }
+/* ---------- FIN STYLES ---------- */
